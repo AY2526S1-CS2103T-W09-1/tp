@@ -101,5 +101,15 @@ public interface Model {
      */
     void undoAddressBook();
 
+    /**
+     * Returns true if there are address book states to redo.
+     */
+    boolean canRedoAddressBook();
+
+    /**
+     * Transforms address book to latest redo state.
+     */
+    void redoAddressBook();
+
     void sortFilteredPersonList(Comparator<Person> comparator);
 }

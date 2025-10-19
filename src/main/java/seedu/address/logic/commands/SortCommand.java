@@ -54,7 +54,9 @@ public class SortCommand extends Command {
         Comparator<Person> base;
 
         // sort by specific field
+        System.out.println(field.value);
         switch(field.value) {
+
         case NAME:
             base = Comparator.comparing(p -> p.getName().fullName, String.CASE_INSENSITIVE_ORDER);
             break;
